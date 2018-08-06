@@ -158,22 +158,12 @@ nav.mobile ul .dropdown.active li:hover a {
     color: #484999;
 }
 
-.mobile, #hamburger {
-    display: none; 
-}
-
 @media screen and (orientation: portrait), screen and (max-width: 1000px) {
-    .mobile {
-        display: initial; 
-    }
 
     #hamburger {
         display: block; 
     }
 
-    header nav.desktop {
-        display: none;
-    }
     header #logo {
         width: 100%;
     }
