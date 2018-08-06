@@ -15,3 +15,9 @@ Session.vim
 tags
 # Persistent undo
 [._]*.un~
+
+# jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata

@@ -1,37 +1,14 @@
+---
+
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Destination Sol | Home</title>
-	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <link rel="stylesheet" type="text/css" href="reset.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="main.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="main.js"></script>
+	{% include head.html %}
 </head>
 <body>
-	<header>
-		<a id="logo" href="index.html" title="Home"><img src="mainMenuLogo.png"></a>
-		<nav class="desktop sans">
-			<span class="link"><a href="#">Home</a></span>
-			<span class="link"><a href="#">About Us</a></span>
-			<span class="link"><a href="#">Terasology</a></span>
-			<span class="link"><a href="#">Contact</a></span>
-			<span class="link"><a href="#">Contribute</a></span>
-		</nav>
-		<span class="mobile" id="hamburger">&#8801;</span>
-	</header>
-	<div id="headerBuffer"></div>
-	<nav class="mobile">
-		<ul class="sans">
-			<li class="link"><a href="#">Home</a></li>
-			<li class="link"><a href="#">About Us</a></li>
-			<li class="link"><a href="#">Terasology</a></li>
-			<li class="link"><a href="#">Contact</a></li>
-			<li class="link"><a href="#">Contribute</a></li>
-		</ul>
-	</nav>
+	{% include nav.html %}
 	<main>
 		<h1>Welcome to DestSolSite</h1>
 	</main>
