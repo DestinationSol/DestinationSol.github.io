@@ -41,8 +41,39 @@ nav.desktop > span {
     transition: all .5s;
     padding: .8vh 0.5vw;
     margin-left: 1.5vw;
-    outline: 1px solid #EDE6E6; 
+    border: 1px solid #EDE6E6;
+    position: relative;
 }
+
+nav.desktop > span::after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4vh;
+    height: 4vh;
+    background-image: linear-gradient(to bottom,
+                    transparent 0%, transparent 20%,
+                    black 20%, black 25%,
+                    transparent 25%, transparent 33%,
+                    black 33%, black 43%,
+                    transparent 43%, transparent 50%,
+                    black 50%, black 52%,
+                    transparent 52%, transparent 62%,
+                    black 62%, black 67%,
+                    transparent 67%, transparent 75%,
+                    black 75%, black 78%,
+                    transparent 78%, transparent 90%,
+                    black 90%, black 92%,
+                    transparent 92%, transparent 100%);
+    transform: rotate(-40deg);
+    border-radius: 50%;
+}
+nav.desktop > span:hover::after, nav.desktop > span.active::after {
+    display: initial;
+}
+
 nav.desktop > span a {
     text-decoration: none;
     color: #EDE6E6; 
@@ -50,7 +81,7 @@ nav.desktop > span a {
 
 nav.desktop > span.active {
     background-color: #638ea3;
-    outline: 1px solid #638ea3; 
+    border: 1px solid #638ea3;
 }
 nav.desktop > span.active a {
     color: #060708; 
@@ -59,7 +90,12 @@ nav.desktop > span.active a {
 nav.desktop > span:hover {
     background-color: #c26744;
     color: white;
-    outline: 1px solid #c26744; 
+    border: 1px solid #c26744;
+}
+
+nav.desktop > span.active, nav.desktop > span:hover {
+    border-top-right-radius: 2vh;
+    border-bottom-right-radius: 2vh;
 }
 
 #headerBuffer.small, header.small {
