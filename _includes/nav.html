@@ -3,11 +3,11 @@
 <header>
     <a id="logo" href="index.html" title="Home"><img src="img/mainMenuLogo.png"></a>
     <nav class="desktop sans">
-        <span class="{% if include.active == 'Home' %}active{% endif %}"><a href="#">Home</a></span>
-        <span class="{% if include.active == 'About Us' %}active{% endif %}"><a href="#">About Us</a></span>
-        <span class="{% if include.active == 'Terasology' %}active{% endif %}"><a href="#">Terasology</a></span>
-        <span class="{% if include.active == 'Contact' %}active{% endif %}"><a href="#">Contact</a></span>
-        <span class="{% if include.active == 'Contribute' %}active{% endif %}"><a href="#">Contribute</a></span>
+        <span{% if include.active == 'Home' %} class='active'{% endif %}><a href="#">Home</a></span>
+        <span{% if include.active == 'About Us' %} class='active'{% endif %}><a href="#">About Us</a></span>
+        <span{% if include.active == 'Terasology' %} class='active'{% endif %}><a href="#">Terasology</a></span>
+        <span{% if include.active == 'Contact' %} class='active'{% endif %}><a href="#">Contact</a></span>
+        <span{% if include.active == 'Contribute' %} class='active'{% endif %}><a href="#">Contribute</a></span>
     </nav>
     <span class="mobile" id="hamburger">&#8801;</span>
 </header>
