@@ -47,31 +47,42 @@ nav.desktop > span {
 
 nav.desktop > span::after {
     content: "";
-    display: none;
+    visibility: hidden;
+    backface-visibility: hidden;
     position: absolute;
-    top: 0;
-    right: 0;
+    z-index: -1;
+    top: -1.5vh;
+    right: -1.5vh;
     width: 4vh;
     height: 4vh;
     background-image: linear-gradient(to bottom,
-                    transparent 0%, transparent 20%,
+                    #c0c0c0 0%, #c0c0c0 20%,
                     black 20%, black 25%,
-                    transparent 25%, transparent 33%,
+                    #c0c0c0 25%, #c0c0c0 33%,
                     black 33%, black 43%,
-                    transparent 43%, transparent 50%,
+                    #c0c0c0 43%, #c0c0c0 50%,
                     black 50%, black 52%,
-                    transparent 52%, transparent 62%,
+                    #c0c0c0 52%, #c0c0c0 62%,
                     black 62%, black 67%,
-                    transparent 67%, transparent 75%,
+                    #c0c0c0 67%, #c0c0c0 75%,
                     black 75%, black 78%,
-                    transparent 78%, transparent 90%,
+                    #c0c0c0 78%, #c0c0c0 90%,
                     black 90%, black 92%,
-                    transparent 92%, transparent 100%);
+                    #c0c0c0 92%, #c0c0c0 100%);
     transform: rotate(-40deg);
     border-radius: 50%;
 }
 nav.desktop > span:hover::after, nav.desktop > span.active::after {
-    display: initial;
+    visibility: visible;
+    transition: all 0.5s cubic-bezier(0, 1, 0.75, 1.25);
+}
+
+nav.desktop > span:not(.active)::after {
+    transform: rotate(-40deg) scale(0);
+}
+
+nav.desktop > span:not(.active):hover::after {
+    transform: rotate(-40deg) scale(1);
 }
 
 nav.desktop > span a {
@@ -95,7 +106,6 @@ nav.desktop > span:hover {
 
 nav.desktop > span.active, nav.desktop > span:hover {
     border-top-right-radius: 2vh;
-    border-bottom-right-radius: 2vh;
 }
 
 #headerBuffer.small, header.small {
