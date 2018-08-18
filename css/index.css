@@ -1,0 +1,84 @@
+section:not(#slideshow) {
+    height: 75vh;
+    background-color: rgba(255, 255, 255, 0.5)
+}
+
+#slideshow, #slideshow > img {
+    height: 70vh;
+}
+
+#slideshow {
+    position: relative;
+    background-color: #060708;
+}
+
+#slideshow > img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+}
+
+#slideshow > img:first-of-type {
+    z-index: 1;
+}
+
+#slideshow > .arrow {
+    font-size: 6em;
+    color: #EDE6E6;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    padding: 0 1vw 1vw 1vw;
+    border-radius: 15px;
+    z-index: 2;
+}
+
+#slideshow > .arrow:hover {
+    background-color: #c26744;
+}
+
+#slideshow > #left {
+    left: 5vw;
+}
+
+#slideshow > #right {
+    right: 5vw;
+}
+
+#slideshow .dot {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    bottom: 1em;
+    z-index: 2;
+    border-radius: 50%;
+    background-color: #060708;
+    cursor: pointer;
+    transition: .2s all;
+}
+
+#slideshow .dot.active {
+    background-color: #638ea3;
+}
+
+#slideshow .dot:hover {
+    background-color: #c26744;
+}
+
+@media screen and (orientation: portrait), screen and (max-width: 1000px) {
+    #slideshow, #slideshow > img {
+        height: 35vh;
+        width: 100vw;
+    }
+
+    #slideshow img {
+        object-fit: cover;
+    }
+
+    #slideshow .arrow {
+        font-size: 3em;
+        padding: 0 2vw 2vw 2vw;
+    }
+}

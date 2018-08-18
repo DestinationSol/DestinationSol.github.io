@@ -2,8 +2,12 @@ body {
     background-image: url("../img/mainMenuBg.png");
     background-attachment: fixed;
 }
-main {
-    height: 200vh;
+
+.noSelect {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .sans {
