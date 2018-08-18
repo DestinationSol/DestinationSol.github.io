@@ -10,7 +10,7 @@ title: "Home"
 		<span id="left" class="arrow noSelect">&lsaquo;</span>
 		{% for image in site.static_files %}
 			{% if image.path contains 'img/slideshow' %}
-		<img src="{{ image.path }}"/>
+		<img src="{{ image.path | remove_first:'/' }}"/>
 			{% endif %}
 		{% endfor %}
 		<span id="right" class="arrow noSelect">&rsaquo;</span>
