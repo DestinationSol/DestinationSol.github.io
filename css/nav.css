@@ -134,6 +134,7 @@ header nav.desktop > span {
 }
 
 nav.mobile {
+    display: none;
     position: fixed;
     z-index: 3;
     width: 100vw;
@@ -152,10 +153,6 @@ nav.mobile ul li {
 nav.mobile ul li a {
     text-decoration: none;
     color: #EDE6E6; 
-}
-nav.mobile ul li div {
-    display: none;
-    font-size: 70%; 
 }
 nav.mobile ul.links > li:hover {
     background-color: #c26744;
