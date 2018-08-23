@@ -5,28 +5,26 @@ title: "Home"
 
 <link rel="stylesheet" type="text/css" href="css/index.css">
 <script src="js/index.js"></script>
-<main>
-	<section id="slideshow">
-		<span id="left" class="arrow noSelect">&lsaquo;</span>
-		{% for image in site.static_files %}
-			{% if image.path contains 'img/slideshow' %}
-		<img src="{{ image.path | remove_first:'/' }}"/>
-			{% endif %}
-		{% endfor %}
-		<span id="right" class="arrow noSelect">&rsaquo;</span>
-	</section>
-	<section id="blurb">
-		<div>
-			<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/F94wEMRPhxI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-		</div>
-		<div>
-			<h1 class="serif">Welcome to Destination Sol</h1>
-			<p class="sans">
-				Pilot your ship in the seamless open world made of space, planets, and more. Find new ships and equipment, find allies and beat all the enemies in this open source space shooter!
-			</p>
-			<p class="sans">
-				Destination Sol is an open-source, free-to-play hardcore arcade/RPG. You start as a pilot of a small fighter ship on the edge of a star system, and you're free to explore the game world, land on planets, fight with enemies, upgrade your ship and equipment, hire mercenaries, mine asteroids, and more.
-			</p>
-		</div>
-	</section>
-</main>
+<section id="slideshow">
+	<span id="left" class="arrow noSelect">&lsaquo;</span>
+	{% for image in site.static_files %}
+		{% if image.path contains 'img/slideshow' %}
+	<img src="{{ image.path | remove_first:'/' }}"/>
+		{% endif %}
+	{% endfor %}
+	<span id="right" class="arrow noSelect">&rsaquo;</span>
+</section>
+<section id="blurb" class="translucent">
+	<div>
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/F94wEMRPhxI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+	<div>
+		<h1>Welcome to Destination Sol</h1>
+		<p>
+			Pilot your ship in the seamless open world made of space, planets, and more. Find new ships and equipment, find allies and beat all the enemies in this open source space shooter!
+		</p>
+		<p>
+			Destination Sol is an open-source, free-to-play hardcore arcade/RPG. You start as a pilot of a small fighter ship on the edge of a star system, and you're free to explore the game world, land on planets, fight with enemies, upgrade your ship and equipment, hire mercenaries, mine asteroids, and more.
+		</p>
+	</div>
+</section>

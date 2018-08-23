@@ -3,6 +3,10 @@ body {
     background-attachment: fixed;
 }
 
+main {
+    min-height: calc(70vh - 1.2em);
+}
+
 .noSelect {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -10,11 +14,15 @@ body {
     user-select: none;
 }
 
-.sans {
+.sans, p {
     font-family: 'Roboto', sans-serif;
 }
-.serif {
+.serif, h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Slab', serif;
+}
+
+.translucent {
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .mobile {
