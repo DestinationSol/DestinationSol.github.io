@@ -2,11 +2,22 @@
 <html lang="en">
 <head>
 	{% include header.html title=page.title %}
+	{% if page.title != 'Home' %}
+	<link rel="stylesheet" type="text/css" href="css/standard.css">
+	{% endif %}
 </head>
 <body>
 	{% include nav.html active=page.title %}
 	<main>
-		{{ content }}
+		{% if page.parallax %}
+		{% include parallax.html %}
+		<script>$("header, #headerBuffer").addClass("small");</script>
+		{% else %}
+		<script>$(document).scroll(() => $("header, #headerBuffer").toggleClass("small", $(document).scrollTop() > 10));</script>
+		{% endif %}
+		<section class="static">
+			{{ content }}
+		</section>
 	</main>
 	{% include footer.html %}
 </body>

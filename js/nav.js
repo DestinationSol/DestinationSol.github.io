@@ -1,10 +1,6 @@
 $(document).ready(function() {
-
-    $(document).on("scroll", function() {
-        $("header, #headerBuffer").toggleClass("small", $(document).scrollTop() > 10);
-    });
     
-    $("nav.desktop .link, nav.mobile ul .link").click(function() {
+    $("nav.desktop span, nav.mobile ul.links li").click(function() {
         $(this).children("a")[0].click();
     });
     $("header #hamburger").click(function() {

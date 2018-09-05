@@ -1,0 +1,12 @@
+.static hr {
+    width: 50%;
+}
+
+.static h1 {
+    text-align: center;
+    padding-top: 2vh;
+}
+
+.static p {
+    margin: 3vh 15vw;
+}

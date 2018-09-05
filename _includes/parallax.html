@@ -1,0 +1,37 @@
+<style>
+    main {
+        min-height: calc(90vh - 1.2em);
+    }
+    #parallax {
+        height: 65vh;
+    }
+    .static {
+        overflow: auto;
+        background-color: white;
+    }
+</style>
+<script>
+    let animating = false
+    let lastScrollTop = 0;
+
+    $(document).scroll(function(event) {
+        var scrollTop = $(this).scrollTop();
+        if (!animating && scrollTop > lastScrollTop) {
+            animateScroll(false, scrollTop - lastScrollTop);
+        }
+        else if (!animating && scrollTop < lastScrollTop) {
+            animateScroll(true, lastScrollTop - scrollTop);
+        }
+        lastScrollTop = scrollTop;
+    });
+
+    function animateScroll(down, pixels) {
+        animating = true;
+        const direction = down ? "-" : "+";
+        const distance = "=" + pixels + "px";
+        $(document.body).animate({
+            backgroundPositionY: direction + distance
+        }, 0, () => animating = false);
+    }
+</script>
+<div id="parallax"></div>
