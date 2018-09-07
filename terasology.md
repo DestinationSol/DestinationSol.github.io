@@ -10,8 +10,8 @@ parallax: true
 
 <div style="text-align:center;">
     <a href="http://jenkins.terasology.org/job/Terasology/"><img src="http://jenkins.terasology.org/job/Terasology/badge/icon" alt="Build Status" /></a>
-    <a href="../../releases/latest"><img src="https://img.shields.io/github/release/MovingBlocks/Terasology.svg" alt="Release" /></a>
-    <a href="../../releases/latest"><img src="https://img.shields.io/github/downloads/MovingBlocks/Terasology/latest/total.svg" alt="Downloads" title="Downloads" /></a>
+    <a href="https://github.com/MovingBlocks/Terasology/releases"><img src="https://img.shields.io/github/release/MovingBlocks/Terasology.svg" alt="Release" /></a>
+    <a href="https://github.com/MovingBlocks/Terasology/releases"><img src="https://img.shields.io/github/downloads/MovingBlocks/Terasology/latest/total.svg" alt="Downloads" title="Downloads" /></a>
     <a href="https://www.bountysource.com/teams/MovingBlocks"><img src="https://img.shields.io/bountysource/team/MovingBlocks/activity.svg" alt="Bounties" /></a>
     <a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license(code)-Apache%202.0-blue.svg" /></a>
     <a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg" alt="License(art)" /></a>
