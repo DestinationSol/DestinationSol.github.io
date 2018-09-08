@@ -3,6 +3,49 @@ footer {
     color: #EDE6E6;
 }
 
-footer p {
+footer a {
+    color: inherit;
+}
+
+footer #copyright {
     background-color: #060708;
+}
+
+footer #social {
+    background-color: #353637;
+    padding: 0.25em;
+    font-size: 1.5em;
+}
+
+.fab, .fas {
+    padding: 0.1em;
+    transition: 0.25s all;
+}
+
+.fa-facebook:hover {
+    color:  #3B5998;
+}
+
+.fa-twitter:hover {
+    color: #326ADA;
+}
+
+.fa-discord:hover {
+    color: #7289DA;
+}
+
+.fa-youtube:hover {
+    color: #CC181E;
+}
+
+.fa-reddit:hover {
+    color: #FF6314;
+}
+
+.fa-google-plus:hover {
+    color: #D34836;
+}
+
+.fa-comments:hover {
+    color: #C62828;
 }

@@ -15,7 +15,6 @@ parallax: true
     <a href="https://www.bountysource.com/teams/MovingBlocks"><img src="https://img.shields.io/bountysource/team/MovingBlocks/activity.svg" alt="Bounties" /></a>
     <a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license(code)-Apache%202.0-blue.svg" /></a>
     <a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg" alt="License(art)" /></a>
-    <!-- <a href="https://www.versioneye.com/user/projects/537612b214c1584e82000022"><img src="https://www.versioneye.com/user/projects/537612b214c1584e82000022/badge.svg" alt="Dependency Status" /></a> --> <!-- TODO: what to do with this? -->
     <a href="https://webchat.freenode.net/?channels=terasology"><img src="https://img.shields.io/badge/irc-%23terasology-blue.svg" alt="IRC Channel" title="IRC Channel" /></a>
 </div>
 
