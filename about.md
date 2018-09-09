@@ -16,7 +16,7 @@ After receiving highly positive reviews launching as an indie title on Steam Mil
 
 A call was put out to the player community for a new maintainer, and open source was an option praised by many and already somewhat in place on Sourceforge. The open source group MovingBlocks behind [Terasology](http://terasology.org) stepped in to offer infrastructure and maintenance.
 
-Milosh accepted our offer and supported us in moving the game onwards to its new home here on GitHub where we'll set up to accept contributions from anybody willing to help improve Destination Sol and expand on its gameplay.
+Milosh accepted our offer and supported us in moving the game onwards to its new home on [GitHub](https://github.com/MovingBlocks/DestinationSol) where we'll set up to accept contributions from anybody willing to help improve Destination Sol and expand on its gameplay.
 
 Destination Sol is now officially licensed under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html) (except soundtrack, see above) and available in source code form at [GitHub](https://github.com/MovingBlocks/DestinationSol).
 
