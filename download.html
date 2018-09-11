@@ -1,0 +1,29 @@
+---
+layout: page
+title: "Download"
+parallax: true
+---
+
+<link rel="stylesheet" type="text/css" href="css/download.css">
+<script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
+<h1>Download</h1>
+<hr>
+<p>
+    Download on <a href="https://store.steampowered.com/app/342980/Destination_Sol/">Steam</a>,
+    <a href="https://play.google.com/store/apps/details?id=com.miloshpetrov.sol2.android&hl=en">Google Play</a>
+    or use one of the GitHub releases below:
+</p>
+<div id="releases"></div>
+<script>
+var md = new Remarkable({
+    linkify: true
+});
+$.getJSON("https://api.github.com/repos/MovingBlocks/DestinationSol/releases", function(response) {
+    $.each(response, function(i, release) {
+        $("#releases").append(`<div class="sans">
+            <h1><a href="${release.assets[0].browser_download_url}">${release.name}</a></h1>
+            <div class="releaseBody">${md.render(release.body)}</div>
+        </div>`);
+    });
+});
+</script>
