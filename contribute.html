@@ -1,0 +1,37 @@
+---
+layout: page
+title: "Contribute"
+parallax: true
+---
+
+<link rel="stylesheet" type="text/css" href="css/contribute.css">
+<h1>Running Destination Sol from source</h1>
+<hr>
+<p>
+    Destination Sol requires either Java 7 or 8. You can either use Git or download a source zip from
+    <a href="https://github.com/MovingBlocks/DestinationSol">GitHub</a>
+</p>
+<pre>
+    <code>
+    $ git clone https://github.com/MovingBlocks/DestinationSol.git
+    $ cd DestinationSol
+    $ gradlew run
+    </code>
+</pre>
+<h1>Top 30 Contributors</h1>
+<hr>
+<div id="contributors"></div>
+<script>
+$.getJSON("https://api.github.com/repos/MovingBlocks/DestinationSol/contributors", function(response) {
+    $.each(response, function(i, contributor) {
+        $("#contributors").append(`<div id="contributor${i+1}" class="contributor">
+        <div class="left sans">
+            <span>${i+1}</span><br>
+            <a href="${contributor.html_url}">${contributor.login}</a><br>
+            ${contributor.contributions} contribution${contributor.contributions < 2 ? "" : "s"}
+        </div>
+        <img src="${contributor.avatar_url}">
+        </div>`);
+    });
+});
+</script>
