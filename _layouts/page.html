@@ -3,7 +3,7 @@
 <head>
 	{% include header.html title=page.title %}
 	{% if page.title != 'Home' %}
-	<link rel="stylesheet" type="text/css" href="css/standard.css">
+	<link rel="stylesheet" type="text/css" href="/css/standard.css">
 	{% endif %}
 </head>
 <body>
@@ -16,7 +16,9 @@
 		<script>$(document).scroll(() => $("header, #headerBuffer").toggleClass("small", $(document).scrollTop() > 10));</script>
 		{% endif %}
 		<section class="static">
-			{{ content }}
+			<div class="container">
+				{{ content }}
+			</div>
 		</section>
 	</main>
 	{% include footer.html %}

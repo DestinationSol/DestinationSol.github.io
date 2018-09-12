@@ -6,10 +6,6 @@ pre {
     border-radius: 2px;
 }
 
-#contributors {
-    margin: auto 5vw;
-}
-
 .contributor {
     position: relative;
     float: left;

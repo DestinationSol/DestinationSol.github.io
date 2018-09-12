@@ -1,0 +1,13 @@
+---
+layout: page
+---
+
+<style>
+	.static #authorDate {
+		text-align: center;
+	}
+</style>
+<h1>{{ page.title }}</h1>
+<hr>
+<div id="authorDate" class="sans"><small>Posted by {{ page.author }} on {{ page.date | date: '%B %d, %Y' }}</small></div>
+{{ content }}

@@ -7,6 +7,10 @@
     padding-top: 2vh;
 }
 
-.static p {
-    margin: 3vh 15vw;
+.static .container {
+    margin: 0 15vw 3vh 15vw;
+}
+
+.static .container p {
+    margin: 3vh auto;
 }

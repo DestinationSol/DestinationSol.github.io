@@ -1,12 +1,10 @@
 .releaseBody ul { 
     list-style-type: disc; 
-    list-style-position: inside; 
-    margin: 3vh 15vw;
+    list-style-position: inside;
 }
 .releaseBody ol { 
     list-style-type: decimal; 
-    list-style-position: inside; 
-    margin: 3vh 15vw;
+    list-style-position: inside;
 }
 .releaseBody ul ul, .releaseBody ol ul { 
     list-style-type: circle; 
