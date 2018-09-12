@@ -1,23 +1,23 @@
-<link rel="stylesheet" type="text/css" href="/css/nav.css">
-<script src="/js/nav.js"></script>
+<link rel="stylesheet" type="text/css" href="{{ site.base_url }}/css/nav.css">
+<script src="{{ site.base_url }}/js/nav.js"></script>
 <header>
-    <a id="logo" href="/" title="Home"><img src="/img/mainMenuLogo.png"></a>
+    <a id="logo" href="{{ site.base_url }}/" title="Home"><img src="{{ site.base_url }}/img/mainMenuLogo.png"></a>
     <nav class="desktop sans">
-        <span{% if include.active == 'Home' %} class='active'{% endif %}><a href="/">Home</a></span>
-        <span{% if include.active == 'About Us' %} class='active'{% endif %}><a href="/about">About Us</a></span>
-        <span{% if include.active == 'Terasology' %} class='active'{% endif %}><a href="/terasology">Terasology</a></span>
-        <span{% if include.active == 'Download' %} class='active'{% endif %}><a href="/download">Download</a></span>
-        <span{% if include.active == 'Contribute' %} class='active'{% endif %}><a href="/contribute">Contribute</a></span>
+        <span{% if include.active == 'Home' %} class='active'{% endif %}><a href="{{ site.base_url }}/">Home</a></span>
+        <span{% if include.active == 'About Us' %} class='active'{% endif %}><a href="{{ site.base_url }}/about">About Us</a></span>
+        <span{% if include.active == 'Terasology' %} class='active'{% endif %}><a href="{{ site.base_url }}/terasology">Terasology</a></span>
+        <span{% if include.active == 'Download' %} class='active'{% endif %}><a href="{{ site.base_url }}/download">Download</a></span>
+        <span{% if include.active == 'Contribute' %} class='active'{% endif %}><a href="{{ site.base_url }}/contribute">Contribute</a></span>
     </nav>
     <span class="mobile" id="hamburger">&#8801;</span>
 </header>
 <div id="headerBuffer"></div>
 <nav class="mobile">
     <ul class="sans links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About Us</a></li>
-        <li><a href="/terasology">Terasology</a></li>
-        <li><a href="/download">Download</a></li>
-        <li><a href="/contribute">Contribute</a></li>
+        <li><a href="{{ site.base_url }}/">Home</a></li>
+        <li><a href="{{ site.base_url }}/about">About Us</a></li>
+        <li><a href="{{ site.base_url }}/terasology">Terasology</a></li>
+        <li><a href="{{ site.base_url }}/download">Download</a></li>
+        <li><a href="{{ site.base_url }}/contribute">Contribute</a></li>
     </ul>
 </nav>
