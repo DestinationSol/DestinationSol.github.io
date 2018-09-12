@@ -6,3 +6,12 @@
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(() =>$ ("a[href^=http]").attr("target", "_blank"));
+    function getJSONandLinkify(url, callback) {
+        $.getJSON(url, (response) => {
+            callback(response);
+            $("a[href^=http]").attr("target", "_blank");
+        });
+    }
+</script>

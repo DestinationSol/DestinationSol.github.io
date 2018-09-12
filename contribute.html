@@ -22,7 +22,7 @@ parallax: true
 <hr>
 <div id="contributors"></div>
 <script>
-$.getJSON("https://api.github.com/repos/MovingBlocks/DestinationSol/contributors", function(response) {
+getJSONandLinkify("https://api.github.com/repos/MovingBlocks/DestinationSol/contributors", function(response) {
     $.each(response, function(i, contributor) {
         $("#contributors").append(`<div id="contributor${i+1}" class="contributor">
         <div class="left sans">
