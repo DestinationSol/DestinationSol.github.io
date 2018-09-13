@@ -4,7 +4,7 @@ title: "Download"
 parallax: true
 ---
 
-<link rel="stylesheet" type="text/css" href="{{ site.base_url }}/css/download.css">
+<link rel="stylesheet" type="text/css" href="{{ site.base_url }}/css/markdown.css">
 <script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
 <h1>Download</h1>
 <hr>
@@ -22,7 +22,7 @@ getJSONandLinkify("https://api.github.com/repos/MovingBlocks/DestinationSol/rele
     $.each(response, function(i, release) {
         $("#releases").append(`<div class="sans">
             <h1><a href="${release.assets[0].browser_download_url}">${release.name}</a></h1>
-            <div class="releaseBody">${md.render(release.body)}</div>
+            <div class="markdown">${md.render(release.body)}</div>
         </div>`);
     });
 });

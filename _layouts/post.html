@@ -2,6 +2,7 @@
 layout: page
 ---
 
+<link rel="stylesheet" type="text/css" href="{{ site.base_url }}/css/markdown.css">
 <style>
 	.static #authorDate {
 		text-align: center;
@@ -9,5 +10,7 @@ layout: page
 </style>
 <h1>{{ page.title }}</h1>
 <hr>
-<div id="authorDate" class="sans"><small>Posted by {{ page.author }} on {{ page.date | date: '%B %d, %Y' }}</small></div>
-{{ content }}
+<div id="authorDate"><small>Posted by {{ page.author }} on {{ page.date | date: '%B %d, %Y' }}</small></div>
+<div class="markdown sans">
+	{{ content }}
+</div>
