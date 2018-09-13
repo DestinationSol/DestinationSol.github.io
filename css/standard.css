@@ -1,3 +1,8 @@
+.static {
+    overflow: auto;
+    background-color: white;
+}
+
 .static hr {
     width: 50%;
 }
