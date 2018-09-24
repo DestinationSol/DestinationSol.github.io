@@ -5,6 +5,14 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="{{ site.base_url }}/css/reset.css">
 <link rel="stylesheet" type="text/css" href="{{ site.base_url }}/css/main.css">
+<style>
+    body {
+        background-image: url("{{ site.base_url }}/img/Starbasesnow.png"); /* https://opengameart.org/content/perfectly-seamless-night-sky */
+    }
+</style>
+{% if include.title != 'Home' %}
+<link rel="stylesheet" type="text/css" href="{{ site.base_url }}/css/standard.css">
+{% endif %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
     $(document).ready(() => $("a[href^=http]").attr("target", "_blank"));

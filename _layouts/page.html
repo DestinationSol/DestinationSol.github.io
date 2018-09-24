@@ -2,16 +2,15 @@
 <html lang="en">
 <head>
 	{% include header.html title=page.title %}
-	{% if page.title != 'Home' %}
-	<link rel="stylesheet" type="text/css" href="{{ site.base_url }}/css/standard.css">
-	{% endif %}
 </head>
 <body>
 	{% include nav.html active=page.title %}
 	<main>
 		{% if page.parallax %}
-		{% include parallax.html %}
-		<script>$("header, #headerBuffer").addClass("small");</script>
+		<link rel="stylesheet" type="text/css" href="{{ site.base_url }}/css/parallax.css">
+		<script src="{{ site.base_url }}/js/parallax.js"></script>
+		<script>var imageRoot = "{{ site.base_url }}/img/parallax/";</script>
+		<div id="parallax"></div>
 		{% else %}
 		<script>$(document).scroll(() => $("header, #headerBuffer").toggleClass("small", $(document).scrollTop() > 10));</script>
 		{% endif %}
