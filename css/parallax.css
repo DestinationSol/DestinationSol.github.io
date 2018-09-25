@@ -10,12 +10,3 @@ main {
     position: absolute;
     z-index: -1;
 }
-.asteroid.small {
-    height: 5%;
-}
-.asteroid.medium {
-    height: 10%;
-}
-.asteroid.large {
-    height: 15%;
-}

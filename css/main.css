@@ -1,6 +1,7 @@
 body {
     background-position: top;
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 main {
