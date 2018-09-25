@@ -72,3 +72,27 @@ pre {
 .left a {
     font-size: 1.25em;
 }
+
+@media screen and (orientation: portrait), screen and (max-width: 1000px) {
+
+    .contributor:not(#contributor1):not(#contributor2):not(#contributor3) {
+        display: none;
+    }
+    
+    #contributor1, #contributor2, #contributor3 {
+        width: 100%;
+        margin: 3vh 0;
+    }
+
+    .left span {
+        font-size: 2em;
+    }
+
+    .left a {
+        font-size: 1em;
+    }
+
+    pre {
+        overflow-x: scroll;
+    }
+}
