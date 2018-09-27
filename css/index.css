@@ -79,6 +79,37 @@
     padding: 0.25em 0;
 }
 
+#posts {
+    padding-top: 5vh;
+    margin: auto 15vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.post {
+    width: 47%;
+    margin: 2vh auto;
+    background-color: #EEEEEE;
+    border: 2px solid #CCCCCC;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.post img {
+    width: 100%;
+    height: 65%;
+    object-fit: contain;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.post div h3 {
+    margin-top: 2%;
+}
+
 @media screen and (orientation: portrait), screen and (max-width: 1000px) {
     #slideshow, #slideshow > img {
         height: 35vh;
@@ -92,5 +123,13 @@
     #slideshow .arrow {
         font-size: 3em;
         padding: 0 2vw 2vw 2vw;
+    }
+
+    .post {
+        width: 100%;
+    }
+
+    .post img {
+        height: 35%;
     }
 }

@@ -28,3 +28,21 @@ title: "Home"
 		</p>
 	</div>
 </section>
+<section class="translucent sans">
+	<div id="posts">
+		{% for post in site.posts %}
+		<div class="post">
+			{% if post.image %}
+			<img src="{{ site.base_url }}/img/posts/{{ post.image }}">
+			{% else %}
+			<img src="{{ site.base_url }}/img/mainMenuLogo.png" style="background-color:black;">
+			{% endif %}
+			<div>
+				<h3><a href="{{ site.base_url }}{{ post.url }}">{{ post.title }}</a></h3>
+				<small>{{ post.author }}</small>
+				<p>{{ post.description }}</p>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</section>

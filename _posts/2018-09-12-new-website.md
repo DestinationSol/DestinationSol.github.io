@@ -5,6 +5,7 @@ description: >
   If you have visited our website before you might notice something different now. Yep, we have some more things!
   Our new website was built on a desire to improve upon the prior splashsite.
 author: "NicholasBatesNZ"
+image: "gooey.png"
 parallax: true
 ---
 
