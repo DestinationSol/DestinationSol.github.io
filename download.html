@@ -5,6 +5,16 @@ parallax: true
 ---
 
 <link rel="stylesheet" type="text/css" href="{{ site.base_url }}/css/markdown.css">
+<style>
+.downloads:not(#no0) .markdown {
+    display: none;
+}
+.downloads h1 {
+    text-decoration: underline blue;
+    color: blue;
+    cursor: pointer;
+}
+</style>
 <script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
 <h1>Download</h1>
 <hr>
@@ -20,10 +30,15 @@ var md = new Remarkable({
 });
 getJSONandLinkify("https://api.github.com/repos/MovingBlocks/DestinationSol/releases", function(response) {
     $.each(response, function(i, release) {
-        $("#releases").append(`<div class="sans">
-            <h1><a href="${release.assets[0].browser_download_url}">${release.name}</a></h1>
-            <div class="markdown">${md.render(release.body)}</div>
+        $("#releases").append(`<div class="sans downloads" id="no${i}">
+            <h1>${release.name}</h1>
+            <div class="markdown">
+                ${md.render(`## [Download now!](${release.assets[0].browser_download_url})\n\n` + release.body)}
+            </div>
         </div>`);
+    });
+    $(".downloads").click(function() {
+        $(this).find(".markdown").slideToggle();
     });
 });
 </script>
