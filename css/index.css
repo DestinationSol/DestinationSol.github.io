@@ -49,7 +49,9 @@
     bottom: 1em;
     z-index: 2;
     border-radius: 50%;
-    background-color: #060708;
+    border: 1px solid white;
+    box-sizing: border-box;
+    background-color: transparent;
     cursor: pointer;
     transition: .2s all;
 }
