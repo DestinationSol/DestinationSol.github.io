@@ -28,13 +28,3 @@ title: "Home"
 		</p>
 	</div>
 </section>
-<section class="translucent sans">
-	<ul>
-		{% for post in site.posts %}
-		<li>
-			<a href="{{ site.base_url }}{{ post.url }}">{{ post.title }}</a>
-			<p>{{ post.description }}</p>
-		</li>
-		{% endfor %}
-	</ul>
-</section>

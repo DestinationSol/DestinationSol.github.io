@@ -19,7 +19,7 @@ parallax: true
 </div>
 
 <a href="https://terasology.org/">Terasology</a> is a super extensible open source voxel-based
-game. Born from a Minecraft-inspired tech demo, it is gradually becoming
+game made by the maintainers of Destination Sol. Born from a Minecraft-inspired tech demo, it is gradually becoming
 a stable platform for all sorts of gameplay settings in a voxel world.
 <br>
 <br> From the ground up, Terasology was built to be a super hackable and
