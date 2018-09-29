@@ -133,3 +133,10 @@
         height: 35%;
     }
 }
+
+@media screen and (max-width: 1500px) {
+
+    #posts {
+        margin: auto 5vw;
+    }
+}

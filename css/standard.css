@@ -19,3 +19,9 @@
 .static .container p {
     margin: 3vh auto;
 }
+
+@media screen and (max-width: 1500px) {
+    .static .container {
+        margin: 0 5vw 3vh 5vw;
+    }
+}

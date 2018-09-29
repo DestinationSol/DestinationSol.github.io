@@ -78,10 +78,14 @@ pre {
     .contributor:not(#contributor1):not(#contributor2):not(#contributor3) {
         display: none;
     }
+
+    .contributor::after {
+        display: none;
+    }
     
     #contributor1, #contributor2, #contributor3 {
         width: 100%;
-        margin: 3vh 0;
+        margin: 1vh 0;
     }
 
     .left span {
