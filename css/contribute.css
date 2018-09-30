@@ -1,0 +1,102 @@
+pre {
+    background-color: #353637;
+    color: white;
+    border: solid 2px black;
+    border-radius: 2px;
+}
+
+.contributor {
+    position: relative;
+    float: left;
+    width: 30%;
+    height: 20vh;
+    margin: 3vh 1.66%;
+    background-color: #EEEEEE;
+    border: 2px solid #CCCCCC;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-sizing: border-box;
+}
+
+#contributor1 {
+    margin: 6vh 35% 5vh 35%;
+}
+
+#contributor2 {
+    margin: 4vh 5% 4vh 15%;
+}
+
+#contributor3 {
+    margin: 4vh 15% 4vh 5%;
+}
+
+#contributor1::after, #contributor2::after, #contributor3::after {
+    content: "\f521";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: goldenrod;
+    position: absolute;
+    top: -15%;
+    right: -1.5%;
+    transform: rotate(30deg) scale(4);
+}
+
+#contributor2::after {
+    color: silver;
+}
+
+#contributor3::after {
+    color: #CD7f32;
+}
+
+.contributor img {
+    height: 100%;
+    float: right;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: solid #CCCCCC 1px;
+}
+
+.left {
+    position: absolute;
+    top: 50%;
+    width: calc(100% - 20vh);
+    transform: translate(0, -50%);
+    text-align: center;
+}
+
+.left span {
+    font-size: 2.5em;
+}
+
+.left a {
+    font-size: 1.25em;
+}
+
+@media screen and (orientation: portrait), screen and (max-width: 1000px) {
+
+    .contributor:not(#contributor1):not(#contributor2):not(#contributor3) {
+        display: none;
+    }
+
+    .contributor::after {
+        display: none;
+    }
+    
+    #contributor1, #contributor2, #contributor3 {
+        width: 100%;
+        margin: 1vh 0;
+    }
+
+    .left span {
+        font-size: 2em;
+    }
+
+    .left a {
+        font-size: 1em;
+    }
+
+    pre {
+        overflow-x: scroll;
+    }
+}

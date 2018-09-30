@@ -1,0 +1,18 @@
+.markdown ul { 
+    list-style-type: disc; 
+    list-style-position: inside;
+}
+.markdown ol { 
+    list-style-type: decimal; 
+    list-style-position: inside;
+}
+.markdown ul ul, .markdown ol ul { 
+    list-style-type: circle; 
+    list-style-position: inside; 
+    margin-left: 15px; 
+}
+.markdown ol ol, .markdown ul ol { 
+    list-style-type: lower-latin; 
+    list-style-position: inside; 
+    margin-left: 15px; 
+}

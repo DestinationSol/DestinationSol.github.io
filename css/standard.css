@@ -1,0 +1,27 @@
+.static {
+    overflow: auto;
+    background-color: white;
+}
+
+.static hr {
+    width: 50%;
+}
+
+.static h1 {
+    text-align: center;
+    padding-top: 2vh;
+}
+
+.static .container {
+    margin: 0 15vw 3vh 15vw;
+}
+
+.static .container p {
+    margin: 3vh auto;
+}
+
+@media screen and (max-width: 1500px) {
+    .static .container {
+        margin: 0 5vw 3vh 5vw;
+    }
+}

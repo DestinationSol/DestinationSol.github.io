@@ -1,63 +1,48 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+---
+layout: page
+title: "Home"
+---
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
-    <title>Destination Sol</title>
-  </head>
-
-  <body>
-
-    <header>
-      <div class="container">
-        <h1>Destination Sol</h1>
-        <h2>Welcome to the open source arcade space shooter. Pew pew!</h2>
-
-        <section id="downloads">
-          <a href="https://github.com/MovingBlocks/DestinationSol" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
-
-    <div class="container">
-      <section id="main_content">
-        <h3>
-<a id="welcome-to-destination-sol" class="anchor" href="#welcome-to-destination-sol" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to Destination Sol</h3>
-
-<p>Destination Sol is a space arcade shooter that we (the MovingBlocks open source organization) adopted in early 2015.</p>
-
-<p>This is a placeholder for a coming GitHub Page splash site, with the goal being a similar site as <a href="http://terasology.org">http://terasology.org</a> hosted <a href="https://github.com/MovingBlocks/movingblocks.github.com">here</a> 
-
-The site repo for this page is <a href="https://github.com/DestinationSol/DestinationSol.github.io">here</a> and we're happy to accept contributions to make the site more spiffy (but still super brief).</p>
-
-<p>For more visit the following sites:</p>
-
-<ul>
-<li>Source: <a href="https://github.com/MovingBlocks/DestinationSol">https://github.com/MovingBlocks/DestinationSol</a>
-</li>
-<li>Steam: <a href="http://store.steampowered.com/app/342980">http://store.steampowered.com/app/342980</a>
-</li>
-<li>Android: <a href="https://play.google.com/store/apps/details?id=com.miloshpetrov.sol2.android&amp;hl=en">https://play.google.com/store/apps/details?id=com.miloshpetrov.sol2.android&amp;hl=en</a>
-</li>
-</ul>
-
-<h3>
-<a id="running-destination-sol-from-source" class="anchor" href="#running-destination-sol-from-source" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running Destination Sol from source</h3>
-
-<p>Requires Java 7 or 8. Can either use Git or download a source zip from GitHub (link above)</p>
-
-<pre><code>$ git clone https://github.com/MovingBlocks/DestinationSol.git
-$ cd DestinationSol
-$ gradlew run
-</code></pre>
-      </section>
-    </div>
-
-    
-  </body>
-</html>
+<link rel="stylesheet" type="text/css" href="{{ site.base_url }}/css/index.css">
+<script src="{{ site.base_url }}/js/index.js"></script>
+<section id="slideshow">
+	<span id="left" class="arrow noSelect">&lsaquo;</span>
+	{% for image in site.static_files %}
+		{% if image.path contains 'img/slideshow' %}
+	<img src="{{ image.path | remove_first:'/' }}"/>
+		{% endif %}
+	{% endfor %}
+	<span id="right" class="arrow noSelect">&rsaquo;</span>
+</section>
+<section id="blurb" class="translucent">
+	<div class="desktop">
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/F94wEMRPhxI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+	<div>
+		<h1>Welcome to Destination Sol</h1>
+		<p>
+			Pilot your ship in the seamless open world made of space, planets, and more. Find new ships and equipment, find allies and beat all the enemies in this open source space shooter!
+		</p>
+		<p>
+			Destination Sol is an open-source, free-to-play hardcore arcade/RPG. You start as a pilot of a small fighter ship on the edge of a star system, and you're free to explore the game world, land on planets, fight with enemies, upgrade your ship and equipment, hire mercenaries, mine asteroids, and more.
+		</p>
+	</div>
+</section>
+<section class="translucent sans">
+	<div id="posts">
+		{% for post in site.posts %}
+		<div class="post">
+			{% if post.image %}
+			<img src="{{ site.base_url }}/img/posts/{{ post.image }}">
+			{% else %}
+			<img src="{{ site.base_url }}/img/mainMenuLogo.png" style="background-color:black;">
+			{% endif %}
+			<div>
+				<h3><a href="{{ site.base_url }}{{ post.url }}">{{ post.title }}</a></h3>
+				<small>{{ post.author }}</small>
+				<p>{{ post.description }}</p>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</section>
