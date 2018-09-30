@@ -5,7 +5,7 @@ In order to build the site locally, you need to have ruby installed. After that 
 ```
 gem install jekyll bundler
 ```
-which will install the Jekyll and Bundler gems,
+which will install the Jekyll and Bundler gems (if this fails, try prepending a `sudo`),
 ```
 bundle install
 ```
@@ -13,7 +13,10 @@ to install the site plugins, and finally
 ```
 bundle exec jekyll serve
 ```
-to build the site. You can access it at `localhost:4000` or by accessing the `_site` folder that is generated
+to build the site. You can access it at `localhost:4000` or by accessing the `_site` folder that is generated.
+To stop the server gracefully, use <kbd>CTRL</kbd> + <kbd>C</kbd> and then confirm the next two prompts with `y`. Should you run into issues here on Mac or Linux, `ps aux |grep jekyll |awk '{print $2}' | xargs kill -9` should do the trick.
+
+Unless you've tweaked the `_config.yml` all changes should automatically appear on the next page refresh without needing to restart the server.
 
 Before Uploading Any Images
 -----------
