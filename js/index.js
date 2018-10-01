@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+    let animate = true, timeout;
     var $images = $("#slideshow").children("img");
     var destination = 0;
     createSlideDots();
@@ -20,7 +21,10 @@ $(document).ready(function() {
             updateSlide();
         });
     }
-    function updateSlide() {
+    function updateSlide(fromInterval = false) {
+        animate = fromInterval;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => animate = true, 5000);
         $("#slideshow").css("pointer-events", "none");
         
         if (destination > $images.length - 1) {
@@ -55,8 +59,10 @@ $(document).ready(function() {
         updateSlide();
     });
     setInterval(function() {
-        destination++;
-        updateSlide();
+        if (animate) {
+            destination++;
+            updateSlide(true);
+        }
     }, 5000);
     
     $(window).resize(createSlideDots);
