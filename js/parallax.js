@@ -35,26 +35,25 @@ function animateScroll(down, pixels) {
 
 /* Floating game assets */
 
-function randomInt(low) {
-    return function(high) {
-        return Math.round(Math.random() * high) + low;
-    }
+function randomInt(low, high) {
+    return Math.round(randomFloat(low, high));
 }
 
-function randomFloat(low) {
-    return function(high) {
-        return Math.random() * high + low;
-    }
+function randomFloat(low, high) {
+    return Math.random() * high + low;
 }
 
-const randomBool = () => Math.random() > 0.5;
+function randomBool() {
+    return Math.random() > 0.5;
+}
+
 
 const entityHandler = (function() {
     let entities = [];
     setInterval(() => {
         window.requestAnimationFrame(() => {
             if (asteroids.length <= 10) {
-                asteroids.push(createAsteroid(randomInt(2)(3), "asteroid" + Number(randomBool())));
+                asteroids.push(createAsteroid(randomInt(2, 3), "asteroid" + Number(randomBool())));
                 asteroids[asteroids.length - 1].init();
             }
             asteroids.forEach(asteroid => asteroid.update());
@@ -94,7 +93,7 @@ const asteroidProto = {
         }
         else {
             let x, y;
-            let [dx, dy] = [randomFloat(0.5)(1), randomFloat(0.5)(1)];
+            let [dx, dy] = [randomFloat(0.5, 1), randomFloat(0.5, 1)];
 
             if (randomBool()) {
                 x = 0 - this.width - 10;
@@ -156,8 +155,8 @@ const asteroidProto = {
                         asteroid.init(true,
                             [
                                 this.x + this.width / 2 + i * (this.size - 1) * 25, this.y,
-                                -this.dx / 2 + randomFloat(-0.75)(1.5),
-                                -this.dy / 2 + randomFloat(-0.75)(1.5)
+                                -this.dx / 2 + randomFloat(-0.75, 1.5),
+                                -this.dy / 2 + randomFloat(-0.75, 1.5)
                             ]
                         );
                         asteroids.push(asteroid);
