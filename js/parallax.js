@@ -35,12 +35,18 @@ function animateScroll(down, pixels) {
 
 /* Floating game assets */
 
-function randomNumber(low) {
+function roundedRandomNumber(low) {
     return function(high) {
         return Math.round(Math.random() * high) + low;
     }
 }
-const randomFromZero = randomNumber(0)
+
+function randomNumber(low) {
+    return function(high) {
+        return Math.random() * high + low;
+    }
+}
+
 const randomBool = () => Math.random() > 0.5;
 
 const entityHandler = (function() {
@@ -48,7 +54,7 @@ const entityHandler = (function() {
     setInterval(() => {
         window.requestAnimationFrame(() => {
             if (asteroids.length <= 10) {
-                asteroids.push(createAsteroid(randomNumber(2)(3), "asteroid" + Number(randomBool())));
+                asteroids.push(createAsteroid(roundedRandomNumber(2)(3), "asteroid" + Number(randomBool())));
                 asteroids[asteroids.length - 1].init();
             }
             asteroids.forEach(asteroid => asteroid.update());
@@ -105,7 +111,7 @@ const asteroidProto = {
                 dy *= -1;
             }
             
-            this.setPosition(x, y, dx, dy, randomNumber(0.5)(1));
+            this.setPosition(x, y, dx, dy);
         }
         setTimeout(() => entityHandler.registerEntity(this), 250);
         parallax.appendChild(this.element);
@@ -144,10 +150,16 @@ const asteroidProto = {
                 entityHandler.remove(this);
                 asteroids.splice(asteroids.indexOf(this), 1);
 
-                if (this.size > 1) {
+                if (this.size > 1.6) {
                     for (let i = -1; i < 2; i += 2) {
                         let asteroid = createAsteroid(this.size - 1, this.image);
-                        asteroid.init(true, [this.x + this.width / 2 + i * (this.size - 1) * 25, this.y, -this.dx + randomNumber(-0.2)(0.2), -this.dy + randomNumber(-0.2)(0.2)]);
+                        asteroid.init(true,
+                            [
+                                this.x + this.width / 2 + i * (this.size - 1) * 25, this.y,
+                                -this.dx / 2 + randomNumber(-0.75)(1.5),
+                                -this.dy / 2 + randomNumber(-0.75)(1.5)
+                            ]
+                        );
                         asteroids.push(asteroid);
                     }
                 }
