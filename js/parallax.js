@@ -110,16 +110,18 @@ const asteroidProto = {
                 dy *= -1;
             }
             
-            this.setPosition(x, y, dx, dy);
+            this.setPosition(x, y, dx, dy, randomFloat(-2.5, 5));
         }
         setTimeout(() => entityHandler.registerEntity(this), 250);
         parallax.appendChild(this.element);
     },
-    setPosition(x, y, dx, dy) {
+    setPosition(x, y, dx, dy, rot) {
         this.x = x;
         this.y = y;
         this.dx = dx;
         this.dy = dy;
+        this.rotPerFrame = rot;
+        this.rot = 0;
 
         this.element.style.left = this.x + "px";
         this.element.style.top = this.y + "px";
@@ -129,6 +131,9 @@ const asteroidProto = {
         this.y += this.dy;
         this.element.style.left = this.x + "px";
         this.element.style.top = this.y + "px";
+        this.rot += this.rotPerFrame;
+        this.rot %= 360;
+        this.element.style.transform = "rotate(" + this.rot + "deg)";
 
         if (this.x < 0 && this.dx < 0) {
             this.dx = -this.dx;
@@ -156,7 +161,8 @@ const asteroidProto = {
                             [
                                 this.x + this.width / 2 + i * (this.size - 1) * 25, this.y,
                                 -this.dx / 2 + randomFloat(-0.75, 1.5),
-                                -this.dy / 2 + randomFloat(-0.75, 1.5)
+                                -this.dy / 2 + randomFloat(-0.75, 1.5),
+                                Math.max(-4, Math.min(4, this.rotPerFrame + randomFloat(-2.5, 5))) // == clamp into [-4, 4]
                             ]
                         );
                         asteroids.push(asteroid);
