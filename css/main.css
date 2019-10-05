@@ -1,41 +1,52 @@
 body {
-    background-position: top;
-    background-attachment: fixed;
-    overflow-x: hidden;
+	background-position: top;
+	background-attachment: fixed;
+	overflow-x: hidden;
 }
 
 main {
-    min-height: calc(70vh - 3.85em);
+	min-height: calc(70vh - 3.85em);
 }
 
 .noSelect {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
-.sans, p {
-    font-family: 'Roboto', sans-serif;
+.sans,
+p {
+	font-family: 'Roboto', sans-serif;
 }
-.serif, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto Slab', serif;
+.serif,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Roboto Slab', serif;
+}
+
+.statusIcon {
+	text-decoration: none;
 }
 
 .translucent {
-    background-color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(255, 255, 255, 0.8);
 }
 
 .mobile {
-    display: none;
+	display: none;
 }
 
 @media screen and (orientation: portrait), screen and (max-width: 1000px) {
-    .mobile {
-        display: initial;
-    }
+	.mobile {
+		display: initial;
+	}
 
-    .desktop {
-        display: none;
-    }
+	.desktop {
+		display: none;
+	}
 }
