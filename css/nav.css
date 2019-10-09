@@ -56,9 +56,9 @@ nav.desktop > span::after {
     width: 4vh;
     height: 4vh;
     background-image: linear-gradient(to bottom,
-                    #c0c0c0 0%, #c0c0c0 16%,
-                    black 16%, black 22%,
-                    #c0c0c0 22%, #c0c0c0 29%,
+                    #c0c0c0 0%, #c0c0c0 15%,
+                    black 15%, black 21%,
+                    #c0c0c0 21%, #c0c0c0 29%,
                     black 29%, black 42%,
                     #c0c0c0 42%, #c0c0c0 47%,
                     black 47%, black 49%,
@@ -66,8 +66,8 @@ nav.desktop > span::after {
                     black 58%, black 64%,
                     #c0c0c0 64%, #c0c0c0 71%,
                     black 71%, black 74%,
-                    #c0c0c0 74%, #c0c0c0 85%,
-                    black 85%, black 87%,
+                    #c0c0c0 74%, #c0c0c0 84%,
+                    black 84%, black 87%,
                     #c0c0c0 87%, #c0c0c0 100%);
     transform: rotate(-40deg);
     border-radius: 50%;
