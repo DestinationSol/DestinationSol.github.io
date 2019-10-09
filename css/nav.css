@@ -56,19 +56,19 @@ nav.desktop > span::after {
     width: 4vh;
     height: 4vh;
     background-image: linear-gradient(to bottom,
-                    #c0c0c0 0%, #c0c0c0 20%,
-                    black 20%, black 25%,
-                    #c0c0c0 25%, #c0c0c0 33%,
-                    black 33%, black 43%,
-                    #c0c0c0 43%, #c0c0c0 50%,
-                    black 50%, black 52%,
-                    #c0c0c0 52%, #c0c0c0 62%,
-                    black 62%, black 67%,
-                    #c0c0c0 67%, #c0c0c0 75%,
-                    black 75%, black 78%,
-                    #c0c0c0 78%, #c0c0c0 90%,
-                    black 90%, black 92%,
-                    #c0c0c0 92%, #c0c0c0 100%);
+                    #c0c0c0 0%, #c0c0c0 16%,
+                    black 16%, black 22%,
+                    #c0c0c0 22%, #c0c0c0 29%,
+                    black 29%, black 42%,
+                    #c0c0c0 42%, #c0c0c0 47%,
+                    black 47%, black 49%,
+                    #c0c0c0 49%, #c0c0c0 58%,
+                    black 58%, black 64%,
+                    #c0c0c0 64%, #c0c0c0 71%,
+                    black 71%, black 74%,
+                    #c0c0c0 74%, #c0c0c0 85%,
+                    black 85%, black 87%,
+                    #c0c0c0 87%, #c0c0c0 100%);
     transform: rotate(-40deg);
     border-radius: 50%;
 }
