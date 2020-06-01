@@ -1,3 +1,5 @@
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/DestinationSol/DestinationSol.github.io) 
+
 Building from Source
 -----------
 In order to build the site locally, you need to have ruby installed. After that you can `cd` into the project directory and run:
