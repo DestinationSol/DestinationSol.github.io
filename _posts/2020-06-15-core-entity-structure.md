@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "The Initial Structures are Almost Complete" 
-description: >
-I've finished most of the fundamental structures for ECS-based design. The next stage is putting those structures to use.
+description: I've finished most of the fundamental structures for ECS-based design. The next stage is putting those structures to use.
 author: "Isaac Lichter" 
 image: "gooey.png"
 parallax: true
