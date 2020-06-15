@@ -13,7 +13,15 @@ Hello everyone! Over the past two weeks, I have developed most of a framework fo
 
 Developing the health/damage system was relatively smooth. There was just one issue: when I ran the tests all at once, they didn't pass. When they were run individually, though, they all passed. The issue was that the three tests were sharing information about the systems registered to process events, but they were also each registering the Damage System. What that meant was that there were three copies of the Damage System, so the Damage Event was processed three times, resulting in triple damage. Once that issue was fixed, the tests all passed, even when run together.
 
+My next goal went a lot less smoothly. I had to figure out how the `receiveForce()` and `handleContact()` methods worked so that I could refactor them. My first thought was to combine the impact handling from `handleContact()` with `receiveForce()`. After all, force is force, However, I had failed to account for the difference between a continuous force and an impulse (a sudden force).
 
+Force gradually changes the velocity of a body over time. An impulse, on the other hand, creates an instantaneous change. When two objects collide, their change in velocity isn't a slow acceleration. Force, on the other hand, causes a body's velocity to incrementally increase.
+
+Once I had that cleared up, I created Force and Impulse events to represent the two interactions. Unfortunately, the way that I had designed it didn't work with the existing physics engine. I had assumed that I would be processing the velocity change myself. However, Destination: Sol uses libGDX to handle its physics. 
+
+That led to the current structure. In order to work with that framework, I made a [Contact Event](https://github.com/IsaacLic/DestinationSol/blob/forceHandling/engine/src/main/java/org/destinationsol/events/ContactEvent.java) that gets called when the physics engine is about to handle a contact. Afterwards, the impact of that contact is processed by an [Impulse Event](https://github.com/IsaacLic/DestinationSol/blob/forceHandling/engine/src/main/java/org/destinationsol/events/ImpulseEvent.java). Forces are handled by a [Force Event](https://github.com/IsaacLic/DestinationSol/blob/forceHandling/engine/src/main/java/org/destinationsol/events/ForceEvent.java) unless it is [immune to force](https://github.com/IsaacLic/DestinationSol/blob/forceHandling/engine/src/main/java/org/destinationsol/components/ImmuneToForce.java). The [pull request](https://github.com/MovingBlocks/DestinationSol/pull/516) is still open.
+
+I also made a small component for entities that don't need so much processing power. For example, if an asteroid is far off screen, it doesn't need to be checking to see if it collided with anything else. Such entities are put into [stasis](https://github.com/IsaacLic/DestinationSol/blob/stasis/engine/src/main/java/org/destinationsol/components/Stasis.java).
 
 #not changed yet
 
