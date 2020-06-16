@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Initial Structures are Almost Complete" 
+title: "Overview of the Basic ECS Structures" 
 description: I've finished most of the fundamental structures for ECS-based design. The next stage is putting those structures to use.
 author: "Isaac Lichter" 
 image: "gooey.png"
@@ -21,7 +21,9 @@ Once I had that cleared up, I created Force and Impulse events to represent the 
 
 That led to the current structure. In order to work with that framework, I made a [Contact Event](https://github.com/IsaacLic/DestinationSol/blob/forceHandling/engine/src/main/java/org/destinationsol/events/ContactEvent.java) that gets called when the physics engine is about to handle a contact. Afterwards, the impact of that contact is processed by an [Impulse Event](https://github.com/IsaacLic/DestinationSol/blob/forceHandling/engine/src/main/java/org/destinationsol/events/ImpulseEvent.java). Forces are handled by a [Force Event](https://github.com/IsaacLic/DestinationSol/blob/forceHandling/engine/src/main/java/org/destinationsol/events/ForceEvent.java) unless it is [immune to force](https://github.com/IsaacLic/DestinationSol/blob/forceHandling/engine/src/main/java/org/destinationsol/components/ImmuneToForce.java). The [pull request](https://github.com/MovingBlocks/DestinationSol/pull/516) is still open.
 
-I also made a small component for entities that don't need so much processing power. For example, if an asteroid is far off screen, it doesn't need to be checking to see if it collided with anything else. Such entities are put into [stasis](https://github.com/IsaacLic/DestinationSol/blob/stasis/engine/src/main/java/org/destinationsol/components/Stasis.java).
+I also made a small component for entities that don't need so much processing power. For example, if an asteroid is far off screen, it doesn't need to be checking to see if it collided with anything else. Such entities are put into [stasis](https://github.com/IsaacLic/DestinationSol/blob/stasis/engine/src/main/java/org/destinationsol/components/Stasis.java). That PR can be found [here](https://github.com/MovingBlocks/DestinationSol/pull/518).
+
+[My next goal](https://github.com/MovingBlocks/DestinationSol/pull/519), removal, was much easier. I created two events: A [Destroy Event](https://github.com/IsaacLic/DestinationSol/blob/removal/engine/src/main/java/org/destinationsol/events/DestroyEvent.java), for when an entity gets destroyed, and a [Removal-For-Optimization Event](https://github.com/IsaacLic/DestinationSol/blob/removal/engine/src/main/java/org/destinationsol/events/RemovalForOptimizationEvent.java), for when an entity no longer needs to exist. I then made a [system](https://github.com/IsaacLic/DestinationSol/blob/removal/engine/src/main/java/org/destinationsol/systems/DefaultDestructionSystem.java) to provide a default way to handle those events. I also made tests for [both](https://github.com/IsaacLic/DestinationSol/blob/removal/engine/src/test/java/org/destinationsol/systems/DestructionSystemTests/DestructionTest.java) [events](https://github.com/IsaacLic/DestinationSol/blob/removal/engine/src/test/java/org/destinationsol/systems/DestructionSystemTests/RemovalForOptimizationTest.java).
 
 #not changed yet
 
