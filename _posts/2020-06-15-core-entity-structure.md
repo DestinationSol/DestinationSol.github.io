@@ -25,6 +25,8 @@ I also made a small component for entities that don't need so much processing po
 
 [My next goal](https://github.com/MovingBlocks/DestinationSol/pull/519), removal, was much easier. I created two events: A [Destroy Event](https://github.com/IsaacLic/DestinationSol/blob/removal/engine/src/main/java/org/destinationsol/events/DestroyEvent.java), for when an entity gets destroyed, and a [Removal-For-Optimization Event](https://github.com/IsaacLic/DestinationSol/blob/removal/engine/src/main/java/org/destinationsol/events/RemovalForOptimizationEvent.java), for when an entity no longer needs to exist. I then made a [system](https://github.com/IsaacLic/DestinationSol/blob/removal/engine/src/main/java/org/destinationsol/systems/DefaultDestructionSystem.java) to provide a default way to handle those events. I also made tests for [both](https://github.com/IsaacLic/DestinationSol/blob/removal/engine/src/test/java/org/destinationsol/systems/DestructionSystemTests/DestructionTest.java) [events](https://github.com/IsaacLic/DestinationSol/blob/removal/engine/src/test/java/org/destinationsol/systems/DestructionSystemTests/RemovalForOptimizationTest.java).
 
+[The last pull request](https://github.com/MovingBlocks/DestinationSol/pull/520) is the first half of my current project: graphics. 
+
 #not changed yet
 
 This coming week, I will be implementing ECS for the construction of asteroids. Once I finish, developers will be able to easily create asteroids using the ECS framework, which is one step closer to easy development and modding. 
