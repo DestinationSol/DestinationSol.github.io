@@ -1,9 +1,8 @@
 ---
 layout: post
-title: "Physics and Graphics are Complete"
+title: "Physics interface and Graphics are Complete"
 description: > #This is a brief description of your post that will show up in post previews.
-  If you have visited our website before you might notice something different now. Yep, we have some more things!
-  Our new website was built on a desire to improve upon the prior splashsite.
+  I've created systems to handle the interactions with the physics and the graphics.
 author: "Isaac Lichter"
 image: "gooey.png"
 parallax: true
@@ -11,9 +10,9 @@ parallax: true
 
 Description
 
-Two weeks ago, I left off with two goals for the core structure. The first that I worked on was creating a wrapper for the `Body` class. As I discussed two weeks ago, there was a difficulty with the way that that class interacts with . 
+Two weeks ago, I left off with two goals for the core structure. The first that I worked on was creating a wrapper for the `Body` class. As I discussed two weeks ago, there was a difficulty with the way that that class, which is the bridge between the physics and the game, interacts with components. 
 
-The Gestalt library requires that the information in components be "serializable", which means that the state of the component can be converted into a byte stream, for storage or for sending over the network. The `Body` class doesn't allow for serialization, so it can't be a field in a component.
+The Gestalt library requires that the information in components be "serializable", which means that the state of a component can be converted into a byte stream, for storage or for sending over the network. The `Body` class doesn't allow for serialization, so it can't be a field in a component.
 
 In addition, putting a `Body` into a component violates an ECS design principle. Components should only contain information and/or indicate ways that an entity will behave. The actual logic should be handled by systems. `Body` is a mix of data and functionality, which doesn't fit neatly into ECS design.
 
