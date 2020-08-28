@@ -1,13 +1,12 @@
 ---
-layout: Google Summer of Code Wrap Up"
+layout: post
+title: "Google Summer of Code Wrap Up"
 description: > 
   This is my wrap-up post for Google Summer of Code, but I intend to keep contributing (and hopefully posting here).
 author: "Isaac Lichter"
 image: "asteroid_1.png"
 parallax: true
 ---
-
-# Summary
 
 This summer, I worked on transferring Destination: Sol from the Object-Oriented Programming model to [Entity-Component-System](https://github.com/MovingBlocks/Terasology/wiki/Entity-system-concepts) 
 (ECS) architecture. In ECS architecture, new behavior is added using composition, rather than inheritance, so it becomes very easy to add or remove any particular piece of functionality.
