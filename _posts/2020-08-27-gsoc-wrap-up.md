@@ -68,4 +68,4 @@ For further detail, check out my previous blog posts ([1](http://destinationsol.
 
 # Conclusion
 
-I had a lot of fun working on this project! At times I felt like a detective, and other times I felt like an architect. I couldn't have wished for better mentors or a better community - everyone was amazing! Whether it was helping me with my questions, providing helpful tips, or discussing design concepts, everyone was incredibly knowledgable and friendly. My skills as a developer grew exponentially under my mentors' guidance. This was a great experience, and I'm thrilled to have been able to contribute!
+I had a lot of fun working on this project! At times I felt like a detective, and at other times I felt like an architect. I couldn't have wished for better mentors or community - everyone was amazing! Whether it was helping me with questions, providing helpful tips, or discussing design concepts, everyone was incredibly knowledgable and friendly. I appreciate my mentors' guidance, which helped me grow as a developer. I'm happy to give back to the open source community. I loved the experience, and I'm thrilled to have been able to contribute!
