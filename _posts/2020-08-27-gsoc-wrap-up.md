@@ -64,7 +64,7 @@ Here's the full list of my work:
 
 For further detail, check out my previous blog posts ([1](http://destinationsol.org/2020/06/01/gsoc-project.html), [2](http://destinationsol.org/2020/06/15/core-entity-structure.html), [3](http://destinationsol.org/2020/07/01/finished-core-structures.html), [4](http://destinationsol.org/2020/07/20/basic-ecs-structures.html), [5](http://destinationsol.org/2020/08/10/working-asteroids.html)) or take a look at my documentation. For the current list of TODOs, see [here](https://docs.google.com/document/d/1-p3wWQMgm3c06DpBxLHs-1rVbtXtUGvHDZJDn08UN-U/edit). 
 
-Here's a screenshot of a golden asteroid created by my code: ![Asteroid screenshot](../img/posts/golden_asteroid_screenshot.png) 
+Here's a screenshot of a golden asteroid created by my code: ![Asteroid](golden_asteroid_screenshot.png) 
 
 # Conclusion
 
