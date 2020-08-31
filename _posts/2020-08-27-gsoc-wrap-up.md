@@ -34,7 +34,9 @@ For guides on working with ECS, check out these links:
 - [https://github.com/MovingBlocks/Terasology/wiki/Entity-System-Architecture](https://github.com/MovingBlocks/Terasology/wiki/Entity-System-Architecture)
 - [https://github.com/MovingBlocks/DestinationSol/wiki/Creating-Entities](https://github.com/MovingBlocks/DestinationSol/wiki/Creating-Entities)
 - [https://github.com/MovingBlocks/DestinationSol/wiki/Event-System](https://github.com/MovingBlocks/DestinationSol/wiki/Event-System)
-<br>
+
+
+
 
 # Links to my Work
 
