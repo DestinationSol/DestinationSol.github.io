@@ -26,7 +26,7 @@ Completed Work On SolarSystemGenerator
 
 Finishing up SolarSystemGenerators was a major step forward in the World-Gen project. This class handles many of the steps involved in setting up the Destination: Sol world. For example, it determines how every Feature (Planet, Maze, Asteroid Belt, etc.) in the World will be placed. It also decides how many to place, which types to use, and more.
 
-One helpful step I took in developing SolarSystemGenerators was creating the Orbital class. This class helps keep track of all the different areas that objects can be placed in within a SolarSystem. You can think of these areas as a 'ring' that circles around the center of the System. Each Featur is placed within one of those rings.
+One helpful step I took in developing SolarSystemGenerators was creating the Orbital class. This class helps keep track of all the different areas that objects can be placed in within a SolarSystem. You can think of these areas as a 'ring' that circles around the center of the System. Each Feature is placed within one of those rings.
 
 Completed Work On PlanetGenerator
 ---------------------------------
