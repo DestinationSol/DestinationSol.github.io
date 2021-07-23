@@ -32,7 +32,7 @@ Completed Work On PlanetGenerator
 ---------------------------------
 ![A Tiny Planet](/img/posts/world-gen-in-action/tinyPlanet1.png)
 
-With PlanetGenerators functioning, the flexibility of the new World-Gen system is really starting to show itself. PlanetGenerators allow users to modify how the objects that make up Planets are place. The density of clouds, amount of ships, the size of the planet, and more can easily be modified. New textures for the Planet can also be added by importing your own assets, more on that soon!
+With PlanetGenerators functioning, the flexibility of the new World-Gen system is really starting to show itself. PlanetGenerators allow users to modify how the objects that make up Planets are placed. The density of clouds, amount of ships, the size of the planet, and more can easily be modified. New textures for the Planet can also be added by importing your own assets, more on that soon!
 
 An interesting aspect of Planet generation is that the actual objects that make up the Planet are not all created with the initial world generation. Rather, the game builds Planets whenever a player gets within a certain distance of them. Therefore, PlanetGenerator doesn't modify object placement directly. Rather, it allows you to change values which will eventually be used to modify the object placement.
 
