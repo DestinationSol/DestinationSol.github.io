@@ -11,6 +11,11 @@ footer #copyright {
     background-color: #060708;
 }
 
+footer #privacy {
+    float: right;
+    padding-right: 1em;
+}
+
 footer #social {
     background-color: #353637;
     padding: 0.25em;
